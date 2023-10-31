@@ -116,3 +116,52 @@ const colors = ["Red", "Green", "Blue", "Yellow", "Pink", "Purple"]
 const [primary, ...restOfColors] = colors
 console.log(primary);
 console.log(restOfColors);
+
+// arrow function examples
+const printSomethingArrow = (msg) => {
+    console.log(msg)
+    return true;
+}
+
+printSomethingArrow("Hello my friends on Halloween Eve")
+printSomethingArrow("Maybe it is the Eve of Halloween?")
+
+const produce = () => ("producing");
+console.log(produce())
+
+const double = (num) => (num * 2)
+console.log(double(5))
+
+const logDoubles = numbers => { numbers.forEach(num => console.log(double(num))) }
+
+const sampleArray = [100, 200, 300, 400, 500]
+logDoubles(sampleArray)
+
+const someNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+someNumbers.forEach(num => {
+    console.log(num * 2);
+})
+
+for (let num of someNumbers) {
+    console.log(num * 2);
+}
+
+for (let num in someNumbers) {
+    console.log(num * 2);
+}
+
+// generate some random data in an array
+const randomData = ["John", 30, "London", true, 0.55, "David", 25, "New York", false, 0.75, "Tim", 35, "Paris", true, 0.45]
+
+// filter out the names
+const names = randomData.filter(item => typeof item === "string")
+
+// capitalize the names
+const capitalizedNames = names.map(name => name.toUpperCase())
+
+// sort the names
+const sortedNames = capitalizedNames.sort()
+
+// log the names
+sortedNames.forEach(name => console.log(name))
